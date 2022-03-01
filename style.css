@@ -435,3 +435,118 @@ a.right.carousel-control {
 .primary  p {
   color: white;
 }
+
+
+/* Price Section */
+
+.custom-price {
+  background-color: grey;
+  padding: 50px 0;
+}
+.custom-price h1 {
+  color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+
+footer {
+  background-color:#01122E ;
+  padding:90px 0 0 ;
+}
+
+.footer-content {
+  margin-bottom: 30px;
+}
+
+.footer-logo img {
+  max-height: 35px;
+}
+
+.footer-desc {
+  color: #F1F0F0;
+  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.social-media {
+   display: flex;
+   column-gap: 12px;
+   justify-content: flex-start;
+   align-items: center;
+   flex-wrap: wrap;
+}
+
+.socmed {
+  width: 20px;
+  max-height: 20px;
+}
+
+.footer-title {
+  color: white;
+  font-weight: 700;
+  font-size: 22px;
+  margin-top: 0;
+}
+
+.footer-link {
+  padding: 0;
+}
+
+.footer-link a {
+  color: #F1F0F0;
+  text-decoration: none !important;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.footer-link li{
+  list-style: none;
+}
+
+.contact {
+  display: flex !important;
+  justify-content: flex-start;
+  align-items:center;
+}
+
+.contact img {
+  width: 15px;
+  max-height: 15px;
+  margin-right: 10px;
+}
+
+.bot-footer {
+  margin-top: 75px;
+  padding: 35px 0;
+  border-top: 1px solid #2F3D6B;
+  text-align: center;
+}
+
+.copyright {
+  color: white;
+  display: block;
+}
+
+.copyright img {
+  width: 12px;
+}
