@@ -179,10 +179,6 @@ color: var(--primary-color);
 
 /* Banner Home */
 
-.banner-home {
-  
-  
-}
 
 .carousel-control.left, .carousel-control.right {
   background-image: none;
@@ -439,25 +435,6 @@ color: var(--primary-color);
 .custom-price h1 {
   color: black;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Footer */
 
