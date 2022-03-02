@@ -650,7 +650,7 @@ color: var(--primary-color);
 /* Promotion Section */
 
 .promotion {
-  background-image: url('/assets/promotion.png');
+  background-image: url('./assets/promotion.png');
   padding: 150px 0;
   background-size: cover;
   margin-bottom: 100px;
