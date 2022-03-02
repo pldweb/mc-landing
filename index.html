@@ -56,7 +56,7 @@
             </div>
         
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse right" id="bs-example-navbar-collapse-1">
+            <div class="collapse navbar-collapse right d-flex" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav">
               
                 <li><a href="#">Fitur</a></li>
@@ -936,6 +936,17 @@ Kami berusaha ekstra untuk terus meningkatkan keamanan dari sisi manapun, sehing
 <!-- Slick JS -->    
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
+
+
+<script>
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 0 ) {
+      $('.navbar').addClass('sticky');
+    } else {
+      $('.navbar').removeClass('sticky');
+    }
+  });
+</script>
 
 <script>
   const items = document.querySelectorAll('.card a.card-link');
