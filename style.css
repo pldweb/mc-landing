@@ -60,7 +60,7 @@ section {
   font-size: 32px;
   font-weight: 700;
   color: var(--title-text-color);
-  width: 75%;
+  width: 60%;
   display: block;
   margin: 0 auto;
   line-height: 1.4;
@@ -516,14 +516,40 @@ color: var(--primary-color);
 
 /* Feature Section */
 .feature {
-  margin-bottom: 50px;
+  margin-bottom: 80px;
+}
+
+.feature .d-flex {
+  row-gap: 25px;
+}
+
+.feature-decsription {
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  text-align: center;
+}
+
+.icon-image {
+  width: 65px;
+  display: block;
+  margin: 0 auto;
+}
+
+.feature-title {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 700;
+  font-size:16px;
+  color: var(--title-text-color);
 }
 
 
 /* Benefit Section */
 
 .benefit {
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 
 .benefit-container {
@@ -598,6 +624,8 @@ color: var(--primary-color);
 .primary  p {
   color: white;
 }
+
+
 
 
 /* Price Section */
@@ -718,6 +746,10 @@ color: var(--primary-color);
 
 
 
+
+#prices > div {
+  display: flex;
+}
 .list-price {
   border: 2px solid var(--primary-color);
   border-radius: 10px;
@@ -812,8 +844,133 @@ color: var(--primary-color);
   color: white;
 }
 
+.other-komponen-harga {
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  background: #fff;
+  padding: 30px 20px;
+  position: relative;
+  margin-top: 50px;
+  color: var(--title-text-color);
+}
+
+.other-komponen-harga ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.other-komponen-harga ul li {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  border-bottom: 1px solid #bdbdbd;
+  font-weight: 500;
+
+}
+
+.list-okh , .okh-button, .okh-description, .okh-title{
+  text-align: center;
+}
+.okh-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--title-text-color);
+}
+
+.okh-description {
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.okh-button {
+  margin-top: 20px;
+}
+
+.okh-button .button {
+  width: 100%;
+}
+
+.list-perangkat-tambahan {
+  color: var(--title-text-color);
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
+}
+
+.list-perangkat-tambahan img {
+  width: 65px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  display: block;
+  float: left;
+}
+
+.list-perangkat-tambahan .lpt-text {
+  display: block;
+  float: left;
+  width: calc(100% - 65px);
+  padding-left: 10px;
+}
+
+.list-perangkat-tambahan .lpt-text .lpt-title {
+  font-weight: bold;
+  
+}
+
+.list-perangkat-tambahan .lpt-description{
+    font-weight: 500;
+}
+
+.list-fitur-tambahan {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.list-fitur-tambahan .lft-title {
+  font-weight: bold;
+}
+
+.list-fitur-tambahan .lft-price {
+  font-weight: bold;
+  display: inline-block;
+  background-color: #edf1ff;
+  color: var(--primary-color);
+  padding: 2px 10px;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.favorit {
+  background-color: var(--primary-color);
+  background-image: url('./assets/bg-2.png');
+  background-position: top;
+}
+
+.favorit .okh-title, .favorit .okh-description, .favorit li, .list-fitur-tambahan {
+  color: white;
+}
 
 /* Guarantee Section */
+
+custom-guarantee::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url('./assets/bg-3.png');
+  background-size: cover;
+  opacity: .2;
+}
 
 .guarantee {
   background-color: var(--primary-color);
