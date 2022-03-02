@@ -126,7 +126,11 @@
           <img src="./assets/slideshow-3.png" class="image-slide">
           <div class="container content-container">
             <div class="content">
-              <h2>MyCommerce untuk Semua Bisnis</h2>
+              <h2>MyCommerce untuk Semua Bisnis
+                <span class="category">
+                  <b class="visible"></b>
+                </span>
+              </h2>
               <p>Dengan MyCommerce, Anda dapat memilih dari ratusan desain tampilan yang sesuai dengan kategori bisnis Anda</p>
               <a href="" class="btn btn-stroke button">Mulai Sekarang</a>
               <ol class="carousel-indicators">
@@ -170,7 +174,7 @@
            <div class="image-content">
              <img src="./assets/how-1.png" alt="">
              <div class="title-content">
-               <h3>Daftarkan bisnis anda di mycommerce.id</h3>
+               <h3>Daftarkan Bisnis Anda di Mycommerce.id</h3>
              </div>
            </div>
          </div>
@@ -540,7 +544,31 @@
 <section class="price custom-price">
   <div class="container">
     <div class="row">
-      <h1>harga</h1>
+      <div class="title">
+
+        <h2 class="title-text price-title">Dapatkan Harga Terbaik
+          Untuk Bisnis Anda</h2>
+         <p class="price-desc">MyCommerce menawarkan layanan dengan sistem berlangganan secara lengkap dengan seluruh modul transaksinya. Sistem ini menggunakan teknologi Software as a Service, yang memudahkan Anda dalam mengelola berbagai kebutuhan bisnis Anda dengan fasilitas maksimal dan harga yang lebih terjangkau. Seluruh sistem menggunakan nama dan identitas dari bisnis Anda, tidak ada nama MyCommerce sama sekali didalamnya.</p>
+      </div>
+      <div class="search-domain">
+          <h2 class="search-title">Mulai toko online dengan nama yang Anda inginkan</h2>
+          <form action="" id="">
+              <div class="form-group">
+              <label for="">www.</label>
+              <input class="form-control" placeholder="alamat toko online Anda" required="" name="domain" type="text" autocomplete="off">
+              <select name="tld" id="">
+                <option value="com">.com</option>
+                <option value="com">.net</option>
+                <option value="com">.id</option>
+                <option value="com">.co.id</option>
+              </select>
+            </div>
+            <div class="form-group mt10">
+              <button type="submit" class="btn btn-stroke button">Cek Nama Toko</button>
+            </div>
+          </form>
+      </div>
+  
     </div>
   </div>
 </section>
@@ -567,13 +595,13 @@
   <div class="container">
     <div class="row">
         <div class="promotion-content">
-          <h2 class=" promotion-title">Buka Toko Online mu Sekarang!</h2>
+          <h2 class=" promotion-title">Mulai Toko Online mu Sekarang!</h2>
           <h3 class="promotion-desc">
-            Jualan lebih hemat, harga mulai dari Rp 2.500 perhari
+           mulai dari <div class="money">Rp2.500</div><span> /hari</span>
           </h3>
 
           <div class="button-benefit">
-            <a href="" class="btn btn-prime button">Buka Toko Sekarang</a>
+            <a href="" class="btn btn-prime button">Mulai Sekarang</a>
           </div>
 
         </div>
@@ -936,8 +964,65 @@ Kami berusaha ekstra untuk terus meningkatkan keamanan dari sisi manapun, sehing
 <!-- Slick JS -->    
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
+<!-- Smooth Scroll -->
 
 
+
+<script>
+
+class Scrooth {
+  constructor({element = window, strength=10, acceleration = 1.2,deceleration = 0.975}={}) {
+    this.element = element;
+    this.distance = strength;
+    this.acceleration = acceleration;
+    this.deceleration = deceleration;
+    this.running = false;
+
+    this.element.addEventListener('wheel', this.scrollHandler.bind(this), {passive: false});
+    this.element.addEventListener('mousewheel', this.scrollHandler.bind(this), {passive: false});
+    this.scroll = this.scroll.bind(this);
+  }
+
+  scrollHandler(e) {
+    e.preventDefault();
+
+    if (!this.running) {
+      this.top = this.element.pageYOffset || this.element.scrollTop || 0;
+      this.running = true;
+      this.currentDistance = e.deltaY > 0 ? 0.1 : -0.1;
+      this.isDistanceAsc = true;
+      this.scroll();
+    } else {
+      this.isDistanceAsc = false;
+      this.currentDistance = e.deltaY > 0 ? this.distance : -this.distance;
+    }
+  }
+
+  scroll() {
+    if (this.running) {
+      this.currentDistance *= this.isDistanceAsc === true ? this.acceleration : this.deceleration;
+      Math.abs(this.currentDistance) < 0.1 && this.isDistanceAsc === false ? this.running = false : 1;
+      Math.abs(this.currentDistance) >= Math.abs(this.distance) ? this.isDistanceAsc = false : 1;
+
+      this.top += this.currentDistance;
+      this.element.scrollTo(0, this.top);
+      
+      requestAnimationFrame(this.scroll);
+    }
+  }
+}
+
+const body = new Scrooth({
+  strength:50,
+  acceleration: 1.2,
+  deceleration: 0.9
+});
+
+
+</script>
+
+
+<!-- Sticky -->
 <script>
   $(window).scroll(function() {
     if ($(this).scrollTop() > 0 ) {
@@ -948,6 +1033,7 @@ Kami berusaha ekstra untuk terus meningkatkan keamanan dari sisi manapun, sehing
   });
 </script>
 
+<!-- Faq -->
 <script>
   const items = document.querySelectorAll('.card a.card-link');
  
@@ -968,8 +1054,7 @@ Kami berusaha ekstra untuk terus meningkatkan keamanan dari sisi manapun, sehing
 
 </script>
 
-
-
+<!-- Slick -->
 <script>
   $(document).ready(function(){
      $('.slider-1').slick({
@@ -999,6 +1084,7 @@ Kami berusaha ekstra untuk terus meningkatkan keamanan dari sisi manapun, sehing
      })
   });
 </script>
+
 <script>
   $(document).ready(function(){
      $('.slider-2').slick({
@@ -1027,6 +1113,26 @@ Kami berusaha ekstra untuk terus meningkatkan keamanan dari sisi manapun, sehing
      
      })
   });
+</script>
+
+
+<!-- Text Change -->
+<script>
+var text = ["F&B", "Fashion", "Kecantikan", "Kesehatan", "Retail", "Toserba", "Otomotif", "Mainan", "Jasa"];
+var counter = 0;
+var elem = $(".visible");
+setInterval(change, 1000);
+function change() {
+  elem.fadeOut(function(){
+    elem.html(text[counter]);
+    counter++;
+    if (counter >= text.length) { 
+      counter = 0;
+    }
+     elem.fadeIn();
+  })
+}
+
 </script>
 
 </body>
