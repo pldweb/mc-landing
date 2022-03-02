@@ -609,13 +609,15 @@ color: var(--primary-color);
 }
 
 .price-title {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
+  width: 50%;
 }
 
 .price-desc {
   width: 85%;
   display: block;
   margin: 0 auto;
+  color: var(--title-text-color);
 }
 
 .search-domain {
