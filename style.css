@@ -256,7 +256,7 @@ color: var(--primary-color);
 
 
 .navbar {
-  position:absolute;
+  position:fixed;
   width: 100%;
   background: transparent;
   border: none;
@@ -268,11 +268,11 @@ color: var(--primary-color);
   -moz-border-radius: 0;
   -ms-border-radius: 0;
   -o-border-radius: 0;
-  transition: all .3s ease;
-  -webkit-transition: all .3s ease;
-  -moz-transition: all .3s ease;
-  -ms-transition: all .3s ease;
-  -o-transition: all .3s ease;
+  transition:all .4s ease;
+  -webkit-transition:all .4s ease;
+  -moz-transition:all .4s ease;
+  -ms-transition:all .4s ease;
+  -o-transition:all .4s ease;
 }
 
 .navbar.sticky {
@@ -280,6 +280,11 @@ color: var(--primary-color);
   background-color: var(--primary-color);
   padding: 20px;
   z-index: 100;
+  transition: all .4s ease;
+  -webkit-transition: all .4s ease;
+  -moz-transition: all .4s ease;
+  -ms-transition: all .4s ease;
+  -o-transition: all .4s ease;
 }
 
 .navbar-container {
