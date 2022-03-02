@@ -523,6 +523,24 @@ color: var(--primary-color);
   row-gap: 25px;
 }
 
+.custom-pills {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 25px;
+  margin-bottom: 80px;
+  border: none;
+}
+
+.feature-item {
+  padding: 20px;
+  border: 2px solid transparent;
+}
+
+.feature-item.active {
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+}
+
 .feature-decsription {
   margin-bottom: 30px;
   position: relative;
