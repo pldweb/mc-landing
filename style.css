@@ -531,34 +531,52 @@ color: var(--primary-color);
 .custom-pills {
   display: flex;
   flex-wrap: wrap;
-  row-gap: 25px;
+  row-gap: 20px;
   margin-bottom: 80px;
   border: none;
 }
 
+.custom-pills > li {
+  display: flex;
+}
+
 .feature-item {
+  padding: 0 10px;
+}
+
+.tab-link {
+  width: 100%;
+  display: flex;
+  
+}
+
+.feature-content {
+  transition: .2s ease;
   padding: 20px;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
-  
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none !important;
+  width: 100%;
+  -webkit-transition: .2s ease;
+  -moz-transition: .2s ease;
+  -ms-transition: .2s ease;
+  -o-transition: .2s ease;
 }
 
-.feature-item a {
-  text-decoration: none;
-}
 
-.feature-item:hover {
+.feature-content:hover {
   background-color: #EDF4FF;
 }
-.feature-item a:hover {
-  text-decoration: none;
-  
-}
 
-.feature-item.active {
+
+.active .feature-content  {
   /* border: 2px solid var(--primary-color); */
  
   background-image: url('./assets/bg.png');
