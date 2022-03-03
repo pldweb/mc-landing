@@ -57,13 +57,13 @@
         
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse right d-flex" id="bs-example-navbar-collapse-1">
-              <ul class="nav navbar-nav">
+              <ul class="nav navbar-nav " id="nav-menu">
               
-                <li><a href="#">Fitur</a></li>
-                <li><a href="#">Harga</a></li>
-                <li><a href="#">Hardware</a></li>
-                <li><a href="#">Hubungi Kami</a></li>
-                <li><a href="#">FAQ</a></li>
+                <li><a href="#feature-section" class="menu">Fitur</a></li>
+                <li><a href="#price-section" class="menu">Harga</a></li>
+                <li><a href="https//store.mycommerce.id" class="menu">Hardware</a></li>
+                <li><a href="https://mycommerce.id/hubungi-kami" class="menu">Hubungi Kami</a></li>
+                <li><a href="#faq-section" class="menu">FAQ</a></li>
             
               </ul>
               
@@ -80,7 +80,7 @@
 
   
       
- <section class="banner-home custom-banner">
+ <section id="banner-section" class="banner-home custom-banner">
   
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
@@ -161,7 +161,7 @@
  
  </section>
 
- <section class="how-section custom-how">
+ <section id="how-section" class="how-section custom-how">
    <div class="container">
       <div class="title">
 
@@ -224,7 +224,7 @@
  </section>
  
 
- <section class="client custom-client">
+ <section id="client-section" class="client custom-client">
    <div class="container">
 
     <div class="title">
@@ -284,7 +284,7 @@
  </section>
   
 
- <section class="benefit custom-benefit">
+ <section id="benefit-section" class="benefit custom-benefit">
   <div class="container">
     <div class="row d-flex benefit-container left">
       <div class="col-lg-6 col-sm-12">
@@ -305,7 +305,7 @@
   </div>
 </section>
 
- <section class="benefit custom-benefit grey">
+ <section id="benefit-section" class="benefit custom-benefit grey">
    <div class="container">
      <div class="row d-flex benefit-container right">
      
@@ -330,7 +330,7 @@
  </section>
 
 
- <section class="feature custom-feature">
+ <section id="feature-section" class="feature custom-feature">
     <div class="container">
       <div class="title">
 
@@ -601,7 +601,7 @@
  </section>
 
   
-<section class="price custom-price">
+<section id="price-section" class="price custom-price">
   <div class="container">
     <div class="row">
       <div class="title">
@@ -880,7 +880,7 @@
   </div>
 </section>
 
-<section class="guarantee custom-guarantee">
+<section id="guarantee-section" class="guarantee custom-guarantee">
   <div class="container">
     <div class="row">
          <div class="guarantee-image">
@@ -898,7 +898,7 @@
   </div>
 </section>
 
-<section class="promotion custom-promotion">
+<section id="promotion-section" class="promotion custom-promotion">
   <div class="container">
     <div class="row">
         <div class="promotion-content">
@@ -916,7 +916,7 @@
   </div>
 </section>
 
-<section class="mitra custom-mitra">
+<section id="mitra-section" class="mitra custom-mitra">
   <div class="container">
     <div class="row">
       <div class="title">
@@ -1025,7 +1025,7 @@
   </div>
 </section>
 
-<section class="faq custom-faq">
+<section id="faq-section" class="faq custom-faq">
   <div class="container">
     <div class="row">
       <div class="title">
@@ -1271,39 +1271,6 @@ Kami berusaha ekstra untuk terus meningkatkan keamanan dari sisi manapun, sehing
 <!-- Slick JS -->    
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-<!-- Sticky -->
-<script>
-  $(window).scroll(function() {
-    if ($(this).scrollTop() > 0 ) {
-      $('.navbar').addClass('sticky');
-    } else {
-      $('.navbar').removeClass('sticky');
-    }
-  });
-</script>
-
-<!-- Faq -->
-<script>
-  const items = document.querySelectorAll('.card a.card-link');
- 
- 
- function toggleAccordion() {
-   const itemToggle = this.getAttribute('aria-expanded');
- 
-   for (i = 0; i < items.length; i++) {
-     items[i].setAttribute('aria-expanded', 'false');
-   }
- 
-   if (itemToggle == 'false') {
-     this.setAttribute('aria-expanded', 'true');
-   }
- }
- 
-     items.forEach((item) => item.addEventListener('click', toggleAccordion));
-
-</script>
-
-<!-- Slick -->
 <script>
   $(document).ready(function(){
      $('.slider-1').slick({
@@ -1362,6 +1329,75 @@ Kami berusaha ekstra untuk terus meningkatkan keamanan dari sisi manapun, sehing
      })
   });
 </script>
+
+<!-- Sticky -->
+<script>
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 0 ) {
+      $('.navbar').addClass('sticky');
+    } else {
+      $('.navbar').removeClass('sticky');
+    }
+  });
+</script>
+
+<!-- Smooth Scroll -->
+<script>
+// $(function(){
+//   $("a[href^='#']").on('click', function(){
+//     var position = $($(this).attr("href")).offset().top;
+
+//    $("html, body").animate({
+//      scrollTop: position - 120
+//    }, 1800);
+//   });
+//   });
+
+
+$(function() {
+  $("a[href^='#'].menu").click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      var position = target.offset().top;
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: position - 120
+        }, 200);
+        return false;
+      }
+    }
+  });
+});
+
+// Change the speed to whatever you want
+// Personally i think 1000 is too much
+// Try 800 or below, it seems not too much but it will make a difference
+
+</script>
+
+<!-- Faq -->
+<script>
+  const items = document.querySelectorAll('.card a.card-link');
+ 
+ 
+ function toggleAccordion() {
+   const itemToggle = this.getAttribute('aria-expanded');
+ 
+   for (i = 0; i < items.length; i++) {
+     items[i].setAttribute('aria-expanded', 'false');
+   }
+ 
+   if (itemToggle == 'false') {
+     this.setAttribute('aria-expanded', 'true');
+   }
+ }
+ 
+     items.forEach((item) => item.addEventListener('click', toggleAccordion));
+
+</script>
+
+
 
 <!-- Text Change -->
 <script>

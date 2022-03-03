@@ -29,6 +29,7 @@
 
 html, body {
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
 p {
@@ -307,7 +308,11 @@ color: var(--primary-color);
   font-weight: 400;
   text-shadow: none;
   padding: 10px 20px;
-
+  transition: .3s ease;
+  -webkit-transition: .3s ease;
+  -moz-transition: .3s ease;
+  -ms-transition: .3s ease;
+  -o-transition: .3s ease;
 }
 
 .custom-navbar .navbar-nav li a:hover, .custom-navbar .navbar-nav li a:focus {
