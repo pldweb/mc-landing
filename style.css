@@ -539,6 +539,7 @@ color: var(--primary-color);
 .feature-item.active {
   border: 2px solid var(--primary-color);
   border-radius: 10px;
+  background-image: url('./assets/bg.png');
 }
 
 .feature-decsription {
@@ -563,6 +564,10 @@ color: var(--primary-color);
   color: var(--title-text-color);
 }
 
+
+.feature-item.active .feature-title {
+  color: white;
+}
 
 /* Benefit Section */
 
