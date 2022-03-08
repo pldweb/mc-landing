@@ -42,7 +42,11 @@ p {
 .navbar .right .navbar-nav::before,
 .container::before,
 .container::after,
-.collapse::after {
+.collapse::after,
+.row::after,
+.row::before
+
+{
   display: none;
 }
 
