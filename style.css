@@ -311,9 +311,11 @@ a.btn:hover:before {
   display: -webkit-flex;
   float: right;
   display: -ms-flexbox;
-  -moz-column-gap: 10px;
-  -webkit-column-gap: 10px;
-  column-gap: 10px;
+  
+}
+
+.button-nav a:first-child {
+  margin-right: 10px;
 }
 
 .button {
