@@ -43,7 +43,8 @@ p {
 .container::before,
 .container::after,
 .collapse::after,
-.row::before
+.row::before,
+.nav::before
 
 {
   display: none;
