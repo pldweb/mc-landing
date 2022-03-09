@@ -633,6 +633,7 @@ a.btn:hover:before {
 .benefit-content p {
   margin-bottom: 30px;
   color: var(--desc-text-color);
+  color: var(--title-text-color)
 }
 
 .benefit-content {
@@ -871,6 +872,15 @@ a.btn:hover:before {
   font-weight: 500;
 }
 
+.list-price ul li.disable-fitur {
+  text-decoration: line-through;
+  color: rgb(175, 175, 175);
+}
+
+.paket-favorit ul li.disable-fitur {
+   color: #ddd;
+}
+
 .footer-price {
   display: -webkit-box;
   display: flex;
@@ -909,7 +919,7 @@ a.btn:hover:before {
 .list-price.paket-favorit h4,
 .list-price.paket-favorit h2 span,
 .list-price.paket-favorit h2,
-.list-price.paket-favorit ul li,
+.paket-favorit ul li,
 .paket-favorit .minimum-berlangganan {
   color: white;
 }
@@ -1557,7 +1567,38 @@ footer {
 
 /* BreakPoints */
 
+
+@media (min-width: 768px) {
+  .container {
+    width: 850px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px){
+  .container {
+    width: 1170px;
+  }
+}
+
+
+
+@media screen and (  max-width: 768px) {
+       
+  }
+  
+}
+
+
 @media screen and (max-width: 992px) {
+
+  
+
   .row.d-flex.benefit-container.right {
     flex-direction: column-reverse;
   }
@@ -1572,7 +1613,42 @@ footer {
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
+
+
+  footer .d-flex {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+
+  .slider .slide img {
+    max-height: 28px;
+  }
+
+  .promotion-content {
+    width: calc(65% - 12rem);
+}
+
+  .promotion {
+    background-position: -300px center;
+  }
+
+  .guarantee-image img {
+    width: 75%;
+}
+
+ #prices.d-flex {
+   align-items: inherit;
+ }
+  #prices > div {
+    padding: 0 10px;
+  }
+
+  .search-domain {
+    width: 85%;
+  }
+
   .navbar-toggle span.icon-bar {
     background-color: white !important;
   }
@@ -1602,8 +1678,12 @@ footer {
   }
 
   .content-container {
-    height: 75%;
-    min-height: 75vh;
+    height: 88%;
+    min-height: 88vh;
+  }
+
+  .content {
+    padding-top: 0;
   }
 
   /* End Banner */
