@@ -1291,7 +1291,7 @@ a.card-link[aria-expanded="true"]:focus {
 
 .card-link[aria-expanded="true"] + .hide-class {
   max-height: 800px;
-  max-height: 65rem;
+  max-height: 218rem;
   opacity: 1;
   transition: all 500ms ease-in-out;
   -webkit-transition: all 500ms ease-in-out;
@@ -1953,13 +1953,19 @@ footer {
 
    /* Banner */
 
-   body p {
-    font-size: calc(22px - 1vw) !important;
-}
+   .conclusion-desc {
+     width: 100%;
+   }
+
+   .guarantee-title , .promotion-title {
+        font-size: 8vw;
+        line-height: 1.2;
+   }
 
    .title-text {
-    width: 80%;
+    width: 100%;
     font-size: 6vw;
+    line-height: 1.2;
 }
    .content-container {
     height: 95%;
@@ -2057,6 +2063,25 @@ footer {
 
 
 @media screen and (max-width: 425px) {
+
+  .conclusion-desc, .guarantee-desc ,.list-okh, .okh-button, .okh-description, .price-desc{
+     padding: 0;
+     text-align: justify;
+   }
+
+  .benefit-content h2 {
+    font-size: 7vw;
+    line-height: 1.2;
+}
+
+
+  .content h2 {
+    font-size: 8vw;
+}
+
+  body p {
+    font-size: calc(22px - 2vw) !important;
+}
 
   .search-domain {
     width: calc(100% - 10vw);
