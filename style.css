@@ -29,6 +29,7 @@ html,
 body {
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 p {
@@ -496,7 +497,7 @@ a.btn:hover:before {
 
 /* Feature Section */
 .feature {
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 }
 
 .feature .d-flex {
@@ -1460,6 +1461,7 @@ a.card-link[aria-expanded="true"]:focus {
 }
 
 .button-conclusion {
+  flex-wrap: wrap;
   margin-top: 20px;
   width: 100%;
   display: -webkit-box;
@@ -1590,11 +1592,14 @@ footer {
 
 
 @media (min-width: 768px) {
-   
+  .container {
+    width: calc(100% - 4vw);
+     }
   }
 @media (min-width: 992px) {
   .container {
     width: 970px;
+    width: calc(100% - 4vw);
   }
 }
 
@@ -1629,8 +1634,20 @@ footer {
 
 @media screen and (max-width: 1200px) {
 
+  
+  #faq-content {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  div.testimonials-content {
+    justify-content: space-between;
+    width: 100%;
+  }
+
   .testimonials-image img {
     width: 100%;
+    min-height: 48vw;
   }
 
   .testimonials-carousel {
@@ -1818,7 +1835,10 @@ footer {
   }
 
   .navbar-header {
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 3vw;
+    padding-right: 3vw;
     display: flex;
     display: -webkit-flex;
     width: 100%;
@@ -1859,17 +1879,14 @@ footer {
 @media screen and (max-width: 992px) {
 
   .testimonials-content {
-    width: 98%;
+    flex-direction: row;
+    width: 85%;
+    
 }
  
   footer .d-flex {
     justify-content: flex-start;
     align-items: flex-start;
-}
-
-  .row.testimonials-content.d-flex {
-    flex-direction: column;
-    width: 85%;
 }
 
   .promotion {
@@ -1934,10 +1951,17 @@ footer {
        
 
    /* Banner */
+
+   .title-text {
+    width: 80%;
+    font-size: 6vw;
+}
    .content-container {
     height: 95%;
-    min-height: 100vh;
+    min-height: 95vh;
  }
+
+
 
  /* Navbar */
    
@@ -2000,12 +2024,11 @@ footer {
 
   .testimonials-image img {
     width: 100%;
-    height: 345px;
+    height: 75vw;
   }
 
   .testimonials-carousel {
-    padding-bottom: 25px;
-    padding-top: 25px;
+    padding: 5vw;
   }
 
   .footer-content {
