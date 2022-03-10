@@ -1952,6 +1952,10 @@ footer {
 
    /* Banner */
 
+   body p {
+    font-size: calc(22px - 1vw) !important;
+}
+
    .title-text {
     width: 80%;
     font-size: 6vw;
@@ -2037,9 +2041,8 @@ footer {
 
    .guarantee-image {
   
-    bottom: -200px;
-    
-    margin-top: -163px;
+    bottom: -46vw;
+    margin-top: -37vw;
    }
 
    .row.testimonials-content.d-flex {
@@ -2052,6 +2055,13 @@ footer {
   }
 }
 
+
+@media screen and (max-width: 425px) {
+  
+  .col-xs-6 {
+    width: 100%;
+  }
+}
 
 
 
