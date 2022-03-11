@@ -1354,12 +1354,8 @@ a.card-link[aria-expanded="true"]:focus {
 .testimonials-image {
   display: block;
   position: relative;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-  overflow: hidden;
+   border-radius: 0;
+ 
   height: 100%;
 }
 
@@ -2067,13 +2063,13 @@ footer {
   .conclusion-desc, .guarantee-desc ,.list-okh, .okh-button, .okh-description, .price-desc{
      padding: 0;
      text-align: justify;
+     text-justify: inter-character;
    }
 
   .benefit-content h2 {
     font-size: 7vw;
     line-height: 1.2;
 }
-
 
   .content h2 {
     font-size: 8vw;
