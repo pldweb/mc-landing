@@ -221,7 +221,7 @@ a.btn:hover:before {
   width: 100%;
   background: transparent;
   border: none;
-  z-index: 2;
+  z-index: 10;
   padding: 30px 0 20px;
   box-shadow: none;
   border-radius: 0;
@@ -1630,6 +1630,15 @@ footer {
 
 @media screen and (max-width: 1200px) {
 
+  body.not-home #page-title-container h1 {
+    margin-bottom: 15px;
+  }
+
+  body.not-home .navbar-header {
+  padding-left: 4vw;
+  padding-right: 4vw;
+}
+
   
   #faq-content {
     width: 100%;
@@ -1797,6 +1806,7 @@ footer {
 }
 
 .navbar-collapse.d-flex.in {
+  z-index: 3;
   display: block !important;
   padding: 20px !important;
   transition: .3s ease;
@@ -2060,6 +2070,14 @@ footer {
 
 @media screen and (max-width: 425px) {
 
+  .header-price h4 {
+    margin-top: 35px;
+  }
+
+  .search-domain form {
+    width: 100%;
+  }
+
   .conclusion-desc, .guarantee-desc ,.list-okh, .okh-button, .okh-description, .price-desc{
      padding: 0;
      text-align: justify;
@@ -2106,4 +2124,48 @@ footer {
 } 
 
 
+
+/* Other Page */
+
+#page-title-container {
+  background: center / cover no-repeat url('./assets/bg-2.png');
+  padding-bottom: 150px;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  
+}
+
+#page-title-container h1 {
+  margin-top: 150px;
+  color: white;
+  font-weight: 700;
+}
+
+body.not-home .content {
+   max-width: 100%;
+   display: block;
+   margin: 0 auto;
+   
+}
+
+body.not-home #main-content {
+    position: relative;
+    background-color: #fff;
+    margin-top: -150px;
+    min-height: 250px;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+    max-width: calc( 95% - 3vw);
+    padding: 20px;
+    border-radius:10px ;
+    -webkit-border-radius:10px ;
+    -moz-border-radius:10px ;
+    -ms-border-radius:10px ;
+    -o-border-radius:10px ;
+    display: block;
+}
+
+body.not-home .button-nav a:first-child {
+  margin: 0;
+}
 
