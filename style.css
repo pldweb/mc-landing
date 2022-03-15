@@ -1632,6 +1632,7 @@ footer {
 
   body.not-home #page-title-container h1 {
     margin-bottom: 15px;
+    font-size: 5vw;
   }
 
   body.not-home .navbar-header {
