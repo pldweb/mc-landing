@@ -1434,20 +1434,37 @@ a.card-link[aria-expanded="true"]:focus {
   background-size: cover;
 }
 
+.conclusion .d-flex {
+  justify-content: center;
+  align-items: center;
+}
+
 .conclusion .title {
-  margin-bottom: 10px;
+  text-align: left;
+  padding: 10px 20px;
+  margin-bottom: 0;
+}
+.conclusion-title {
+  width: 100%;
+}
+.conclusion-content .conclusion-desc:first-child{
+  margin-bottom: 15px;
+}
+
+.conclusion-content {
+  padding: 10px 20px;
 }
 
 .conclusion-desc {
-  text-align: center;
+  font-size: 14px;
+  text-align: left;
   /* background-color: rgb(230, 235, 242); */
-  padding: 20px;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
-  width: 90%;
+  width: 100%;
   display: block;
   margin: 0 auto;
 }
@@ -1458,15 +1475,14 @@ a.card-link[aria-expanded="true"]:focus {
 
 .button-conclusion {
   flex-wrap: wrap;
-  margin-top: 20px;
+  margin-top: 35px;
   width: 100%;
   display: -webkit-box;
   display: flex;
   display: -webkit-flex;
   display: -ms-flexbox;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  
+  justify-content: flex-start;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -1480,6 +1496,10 @@ a.card-link[aria-expanded="true"]:focus {
   right: -200px;
   bottom: 0;
   position: absolute;
+}
+
+.conclusion-image img {
+  width: 100%;
 }
 
 /* Footer */
@@ -1629,6 +1649,22 @@ footer {
 
 
 @media screen and (max-width: 1200px) {
+
+ 
+   .button-conclusion {
+     justify-content: center;
+   }
+   .conclusion .title , .conclusion-content, .conclusion-desc{
+     text-align: center;
+   }
+
+  .conclusion .d-flex {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: calc(100% - 2vw);
+  }
 
   body.not-home #page-title-container h1 {
     margin-bottom: 15px;
