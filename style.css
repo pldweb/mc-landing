@@ -2164,6 +2164,10 @@ footer {
 
 /* Other Page */
 
+body.not-home .navbar .right .navbar-nav {
+    margin-right: calc(60px - -4vw);
+}
+
 #page-title-container {
   background: center / cover no-repeat url('./assets/bg-2.png');
   padding-bottom: 150px;
