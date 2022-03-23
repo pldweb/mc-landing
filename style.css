@@ -1644,6 +1644,9 @@ footer {
     width: 970px;
     width: calc(100% - 4vw);
   }
+  .conclusion .col-lg-6.col-md-8 {
+    padding: 0;
+}
 }
 
 @media (min-width: 1200px){
