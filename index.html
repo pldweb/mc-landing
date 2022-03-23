@@ -344,8 +344,11 @@
       <div class="container">
         <div class="row d-flex benefit-container left">
           <div class="col-lg-6 col-sm-12">
-            <div class="image-benefit">
+            <div class="image-benefit parallax-benefit benefit-1">
               <img src="./assets/benefit-1.png" alt="" />
+               <div class="parallax-image parallax-1">
+                 <img src="./assets/parallax-1.png" alt="">
+               </div>
             </div>
           </div>
           <div class="col-lg-6 col-sm-12">
@@ -384,8 +387,11 @@
             </div>
           </div>
           <div class="col-lg-6 col-sm-12">
-            <div class="image-benefit">
-              <img src="./assets/benefit-2.png" alt="" />
+            <div class="image-benefit parallax-benefit benefit-2">
+              <img src="./assets/benefit-2.png" alt="" class="floating-right"/>
+              <div class="parallax-image parallax-2">
+                <img src="./assets/parallax-2.png" alt="">
+              </div>
             </div>
           </div>
         </div>
@@ -395,12 +401,17 @@
     <section id="feature-section" class="feature custom-feature">
       <div class="container">
         <div class="title">
+       
+      
+
           <h2 class="title-text how-title">
             Mengapa Anda membutuhkan MyCommerce untuk bisnis Anda?
           </h2>
         </div>
+  
+        <button class="btn btn-prime dropdown-toggle custom-button" type="button" id="pills" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Fitur Mycommerce</button>
 
-        <ul class="nav nav-tabs custom-pills">
+        <ul class="nav nav-tabs custom-pills" aria-labelledby="pills">
           <li class="col-md-3 col-sm-6 col-xs-6 feature-item active">
             <div class="tab-link">
               <a data-toggle="tab" href="#feature-1" class="feature-content">
@@ -756,7 +767,7 @@
                     <li class="">Layout Builder</li>
                     <li class="">Integrasi Pengiriman</li>
                     <li class="">Payment Gateway</li>
-                    <li class="">Multi Varian</li>
+                    
                     <li class="">Multi Varian</li>
                     <li class="">Harga Grosir</li>
                     <li class="disable-fitur">Voucher Diskon</li>
@@ -797,7 +808,7 @@
                     <li class="disable-fitur">Layout Builder</li>
                     <li class="disable-fitur">Integrasi Pengiriman</li>
                     <li class="">Payment Gateway</li>
-                    <li class="">Multi Varian</li>
+                    
                     <li class="">Multi Varian</li>
                     <li class="">Harga Grosir</li>
                     <li class="">Voucher Diskon</li>
@@ -838,7 +849,7 @@
                     <li class="">Layout Builder</li>
                     <li class="">Integrasi Pengiriman</li>
                     <li class="">Payment Gateway</li>
-                    <li class="">Multi Varian</li>
+                 
                     <li class="">Multi Varian</li>
                     <li class="">Harga Grosir</li>
                     <li class="">Voucher Diskon</li>
@@ -879,7 +890,7 @@
                     <li class="">Layout Builder</li>
                     <li class="">Integrasi Pengiriman</li>
                     <li class="">Payment Gateway</li>
-                    <li class="">Multi Varian</li>
+                  
                     <li class="">Multi Varian</li>
                     <li class="">Harga Grosir</li>
                     <li class="">Voucher Diskon</li>
@@ -1412,12 +1423,12 @@
     <section id="testimonials-section" class="testimonials custom-testimonials">
       <div class="container">
         <div class="row testimonials-content d-flex">
-           <div class="col-md-5 col-sm-5 col-xs-12">
+           <div class="col-md-5 col-sm-12 col-xs-12">
             <div class="testimonials-image">
               <img src="./assets/testimoni.png" alt="">
             </div>
             </div>
-           <div class="col-md-6 col-sm-6 col-xs-12">
+           <div class="col-md-6 col-sm-12 col-xs-12">
               
  
           <div id="myCarousel" class="carousel slide testimonials-carousel" data-ride="carousel">
@@ -1626,6 +1637,30 @@
         </div>
       </div>
     </footer>
+
+    <!-- Paralaxx Script -->
+    <script>
+      $(document).ready(function() {
+ 
+  $(window).on("load scroll", function() {
+    var parallaxElement = $(".parallax-image"),
+      parallaxQuantity = parallaxElement.length;
+    window.requestAnimationFrame(function() {
+      for (var i = 0; i < parallaxQuantity; i++) {
+        var currentElement = parallaxElement.eq(i),
+          windowTop = $(window).scrollTop(),
+          elementTop = currentElement.offset().top,
+          elementHeight = currentElement.height(),
+          viewPortHeight = window.innerHeight * 0.5 - elementHeight * 0.5,
+          scrolled = windowTop - elementTop + viewPortHeight;
+        currentElement.css({
+          transform: "translate3d(0," + scrolled * -0.15 + "px, 0)"
+        });
+      }
+    });
+  });
+});
+    </script>
 
     <!-- Testimonials Carousel  -->
     <script>

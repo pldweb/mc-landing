@@ -46,7 +46,8 @@ p {
 .collapse::after,
 .row::before,
 .nav::before,
-.navbar-nav::after
+.navbar-nav::after,
+.custom-button
 
 
 {
@@ -538,11 +539,11 @@ a.btn:hover:before {
 .feature-content {
   transition: 0.2s ease;
   padding: 20px;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
   display: -webkit-box;
   display: flex;
   display: -webkit-flex;
@@ -600,6 +601,33 @@ a.btn:hover:before {
 
 /* Benefit Section */
 
+
+
+.floating-right {
+  float: right;
+}
+
+.parallax-benefit > img {
+  max-width: 88%;
+}
+
+.parallax-image {
+    position: absolute;
+    max-width: 90%;
+   
+}
+.parallax-1 {
+    top: -15%;
+    max-width: 90%;
+    right: 0;
+}
+
+.parallax-2 {
+  bottom: -5%;
+  right: 0;
+  max-width: 95%;
+}
+
 .benefit {
   margin-bottom: 80px;
 }
@@ -622,7 +650,7 @@ a.btn:hover:before {
 }
 
 .benefit-content h2 {
-  font-size: 32px;
+  font-size: 30px;
   font-weight: 700;
   color: var(--title-text-color);
   margin-bottom: 20px;
@@ -1653,6 +1681,7 @@ footer {
  
    .button-conclusion {
      justify-content: center;
+     row-gap: 10px;
    }
    .conclusion .title , .conclusion-content, .conclusion-desc{
      text-align: center;
@@ -1843,6 +1872,7 @@ footer {
 }
 
 .navbar-collapse.d-flex.in {
+  height:auto;
   z-index: 3;
   display: block !important;
   padding: 20px !important;
@@ -1894,7 +1924,7 @@ footer {
   .custom-navbar .navbar-nav li a {
     color: var(--title-text-color);
     font-weight: 700;
-    padding: 14px;
+    padding: 12px;
     border: 1px solid #e5e6e9;
     border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -1916,11 +1946,36 @@ footer {
 
 
   /* Testimoni */
+
+  .custom-navbar .navbar-collapse.collapse.in .navbar-nav li a:hover {
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+ .custom-navbar .navbar-collapse.collapse.in a.btn.btn-prime.button:hover {
+    background-color: var(--primary-color);
+}
+
+.custom-navbar .navbar-nav li:nth-child(6) {
+  padding-top: 20px;
+  border-top: 1px solid #e1e1e1;
+  margin-top: 12px;
+}
    
 
 }
 
+@media (min-width: 769px) and (max-width: 992px) {
+  .benefit-content {
+    width: calc(100% - 1rem);
+  }
+}
+
 @media screen and (max-width: 992px) {
+
+  .custom-pills {
+    margin-bottom: 50px;
+  }
 
   .testimonials-content {
     flex-direction: row;
@@ -1968,27 +2023,17 @@ footer {
     margin-top: -190px;
   }
  
-   .benefit-content {
-     text-align: center;
-   }
+  
   
   .content-container {
     height: 90%;
     min-height: 90vh;
 }
 
-  .row.d-flex.benefit-container.right {
-    flex-direction: column-reverse;
-  }
+ 
+ 
 
-  .benefit-container .col-lg-6.col-sm-12,
-  .benefit-content {
-    width: 100% !important;
-  }
-
-  .benefit-container {
-    flex-direction: column;
-  }
+  
 }
 
 @media screen and (max-width: 768px) {
@@ -2007,8 +2052,13 @@ footer {
 
    .title-text {
     width: 100%;
-    font-size: 6vw;
+    font-size: 5vw;
     line-height: 1.2;
+}
+
+.title {
+  margin-bottom: 50px;
+  padding: 0 calc(20px - 1vw);
 }
    .content-container {
     height: 95%;
@@ -2021,6 +2071,7 @@ footer {
    
    .navbar-collapse.collapse.in {
      height: auto;
+     overflow-y: hidden;
    }
 
 
@@ -2035,7 +2086,7 @@ footer {
   /* Price */
 
   .search-domain {
-    width: calc(100% - 7vw);
+    width: calc(100% - 6vw);
  }
 
  div#prices {
@@ -2102,10 +2153,164 @@ footer {
   .search-title {
     width: 100%;
   }
+    
+   /* Benefit */
+
+
+   .active .feature-content {
+    border: 1px solid var(--primary-color);
+    
+}
+
+   .benefit-content {
+    text-align: center;
+    margin-top: 3rem
+  }
+
+.benefit-container .col-lg-6.col-sm-12, .benefit-content {
+   width: 100% !important;
+}
+
+.benefit-container {
+   flex-direction: column;
+ }
+
+.row.d-flex.benefit-container.right {
+   flex-direction: column-reverse;
+ }
+
+
+   .icon-image {
+     display: none;
+   }
+   .custom-pills {
+     gap: 10px;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     margin-bottom: 35px;
+   }
+ 
+  .feature-item{
+    padding: 0;
+     width: calc(50% - 5px);
+  }
+
+   .feature-title {
+    
+     margin-top: 0;
+   }
+
+   .feature-content {
+     padding: 20px;
+     border: 1px solid #e1e1e1;
+   }
+
+   .parallax-benefit > img {
+    max-width: 100%;
+}
+
+   .parallax-1 {
+    top: -15%;
+    max-width: 86%;
+    right: 2%;
+}
+  
+    
+   
+}
+
+@media (max-width: 767px) {
+   .benefit-content {
+     margin-top: 1rem;
+   }
 }
 
 
 @media screen and (max-width: 425px) {
+
+  .search-domain {
+    width: calc(98% - 6vw);
+}
+
+  .guarantee-image img {
+    width: 90%;
+  }
+
+  .custom-button {
+    background: url('./assets/bg-2.png');
+    width: 100%;
+    display: inline;
+    font-size: 4vw;
+    font-weight: 700;
+    margin-bottom: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    color: white !important;
+}
+
+.custom-button::after {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: .255em;
+  vertical-align: .255em;
+  content: "\f0dd";
+  border-top: none;
+  border-right: none;
+  border-bottom: 0;
+  border-left: none;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: 14px;
+  font-weight: 400;
+  right: 0;
+  opacity: .9;
+}
+
+  .container .custom-pills {
+   
+    height: 0;
+    opacity: 0;
+    padding-right: 5px;
+    visibility: hidden;
+    transition: .4s ease;
+    -webkit-transition: .4s ease;
+    -moz-transition: .4s ease;
+    -ms-transition: .4s ease;
+    -o-transition: .4s ease;
+    margin-bottom: 20px;
+  overflow: hidden;
+  overflow-y: scroll;
+
+}
+
+.container.open .custom-pills {
+ 
+  display: flex;
+  height: 200px;
+  z-index: 10; 
+  overflow-y: scroll;
+  padding-right: 5px;
+  visibility: visible;
+  opacity: 1;
+  overflow-x: hidden;
+  transition: .4s ease;
+    -webkit-transition: .4s ease;
+    -moz-transition: .4s ease;
+    -ms-transition: .4s ease;
+    -o-transition: .4s ease;
+}
+
+.benefit-content {
+  margin-top: 4rem;
+}
+
+.feature .d-flex {
+  row-gap: 0;
+}
 
   .header-price h4 {
     margin-top: 35px;
@@ -2153,10 +2358,15 @@ footer {
 }
   
   .benefit-content h2 {
-    font-size: 7vw;
+    font-size: calc(25px - 1vw);
+    margin-top: 0;
   }
   .feature-title {
-    font-size: 5vw;
+    font-size: 4vw;
+  }
+
+  .feature {
+    margin-bottom: 0;
   }
 } 
 
