@@ -2290,7 +2290,7 @@ footer {
 .container.open .custom-pills {
  
   display: flex;
-  height: 200px;
+  height: 250px;
   z-index: 10; 
   overflow-y: scroll;
   padding-right: 5px;
