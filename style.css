@@ -2227,6 +2227,9 @@ footer {
 
 
 @media screen and (max-width: 425px) {
+  .dropdown-backdrop {
+    display: none;
+  }
 
   .search-domain {
     width: calc(98% - 6vw);
